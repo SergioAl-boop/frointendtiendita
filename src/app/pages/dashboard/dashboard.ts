@@ -38,11 +38,31 @@ export class DashboardComponent {
 
   bars = [40, 65, 30, 80, 55, 90, 70];
 
+  months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul'];
+
   activities = [
     'Nuevo usuario registrado',
     'Se realizó una compra',
     'Actualización del sistema completada',
     'Nuevo mensaje recibido'
+  ];
+
+  users = [
+    {
+      name: 'Juan Pérez',
+      email: 'juan@gmail.com',
+      role: 'Admin'
+    },
+    {
+      name: 'Ana López',
+      email: 'ana@gmail.com',
+      role: 'Editor'
+    },
+    {
+      name: 'Carlos Ruiz',
+      email: 'carlos@gmail.com',
+      role: 'Usuario'
+    }
   ];
 
 }
