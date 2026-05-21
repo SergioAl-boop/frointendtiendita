@@ -38,6 +38,8 @@ export class DashboardComponent {
 
   bars = [40, 65, 30, 80, 55, 90, 70];
 
+  months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul'];
+
   activities = [
     'Nuevo usuario registrado',
     'Se realizó una compra',
@@ -45,29 +47,22 @@ export class DashboardComponent {
     'Nuevo mensaje recibido'
   ];
 
-  currentTime = '';
-
-ngOnInit() {
-
-  setInterval(() => {
-
-    const now = new Date();
-
-    this.currentTime = now.toLocaleTimeString();
-
-  }, 1000);
-
-}
-
-days = [
-  1,2,3,4,5,6,7,
-  8,9,10,11,12,13,14,
-  15,16,17,18,19,20,21,
-  22,23,24,25,26,27,28
-];
-
-constructor() {
-  console.log('Hello, World!');
-}
+  users = [
+    {
+      name: 'Juan Pérez',
+      email: 'juan@gmail.com',
+      role: 'Admin'
+    },
+    {
+      name: 'Ana López',
+      email: 'ana@gmail.com',
+      role: 'Editor'
+    },
+    {
+      name: 'Carlos Ruiz',
+      email: 'carlos@gmail.com',
+      role: 'Usuario'
+    }
+  ];
 
 }

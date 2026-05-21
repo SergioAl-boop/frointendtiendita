@@ -1,48 +1,120 @@
 <div class="min-h-screen bg-gray-100 flex">
 
   <!-- SIDEBAR -->
-  <aside class="w-64 bg-gray-900 text-white flex flex-col p-6">
+  <aside class="w-72 bg-gray-900 text-white flex flex-col p-6 shadow-2xl">
 
-    <h1 class="text-3xl font-bold mb-10">
-      Dashboard
-    </h1>
+    <div class="flex items-center gap-3 mb-10">
+      <div class="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-2xl">
+        🚀
+      </div>
 
-    <nav class="flex flex-col gap-4">
+      <div>
+        <h1 class="text-2xl font-bold">
+          Admin Panel
+        </h1>
+
+        <p class="text-gray-400 text-sm">
+          Sistema de gestión
+        </p>
+      </div>
+    </div>
+
+    <!-- PERFIL -->
+    <div class="bg-gray-800 rounded-2xl p-4 mb-8">
+
+      <div class="flex items-center gap-3">
+
+        <img
+          src="https://i.pravatar.cc/100"
+          class="w-14 h-14 rounded-full border-2 border-indigo-500"
+        />
+
+        <div>
+          <h2 class="font-bold">
+            Sergio Navarro
+          </h2>
+
+          <p class="text-sm text-gray-400">
+            Administrador
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- MENU -->
+    <nav class="flex flex-col gap-3">
 
       <a
         href="#"
-        class="bg-indigo-600 p-3 rounded-xl hover:bg-indigo-500 transition"
+        class="bg-indigo-600 p-4 rounded-2xl hover:bg-indigo-500 transition flex items-center gap-3"
       >
-        Inicio
+        🏠 Inicio
       </a>
 
       <a
         href="#"
-        class="p-3 rounded-xl hover:bg-gray-800 transition"
+        class="p-4 rounded-2xl hover:bg-gray-800 transition flex items-center gap-3"
       >
-        Usuarios
+        👥 Usuarios
       </a>
 
       <a
         href="#"
-        class="p-3 rounded-xl hover:bg-gray-800 transition"
+        class="p-4 rounded-2xl hover:bg-gray-800 transition flex items-center gap-3"
       >
-        Reportes
+        📊 Reportes
       </a>
 
       <a
         href="#"
-        class="p-3 rounded-xl hover:bg-gray-800 transition"
+        class="p-4 rounded-2xl hover:bg-gray-800 transition flex items-center gap-3"
       >
-        Configuración
+        📦 Productos
+      </a>
+
+      <a
+        href="#"
+        class="p-4 rounded-2xl hover:bg-gray-800 transition flex items-center gap-3"
+      >
+        💬 Mensajes
+      </a>
+
+      <a
+        href="#"
+        class="p-4 rounded-2xl hover:bg-gray-800 transition flex items-center gap-3"
+      >
+        ⚙️ Configuración
       </a>
 
     </nav>
 
-    <div class="mt-auto">
+    <!-- PROGRESS -->
+    <div class="mt-10 bg-gray-800 p-5 rounded-2xl">
+
+      <div class="flex justify-between mb-2">
+        <span class="text-sm">
+          Almacenamiento
+        </span>
+
+        <span class="text-sm font-bold">
+          75%
+        </span>
+      </div>
+
+      <div class="w-full h-3 bg-gray-700 rounded-full overflow-hidden">
+
+        <div class="h-full w-3/4 bg-indigo-500 rounded-full"></div>
+
+      </div>
+
+    </div>
+
+    <div class="mt-auto pt-6">
 
       <button
-        class="w-full bg-red-500 hover:bg-red-400 transition p-3 rounded-xl font-semibold"
+        class="w-full bg-red-500 hover:bg-red-400 transition p-4 rounded-2xl font-semibold"
       >
         Cerrar sesión
       </button>
@@ -51,68 +123,86 @@
 
   </aside>
 
-  <!-- CONTENIDO -->
-  <main class="flex-1 p-8">
+  <!-- MAIN -->
+  <main class="flex-1 p-8 overflow-auto">
 
     <!-- HEADER -->
-    <div class="flex justify-between items-center mb-8">
+    <div class="flex justify-between items-center mb-10">
 
       <div>
 
-        <h2 class="text-4xl font-bold text-gray-800">
-          Bienvenido 👋
+        <h2 class="text-5xl font-bold text-gray-800">
+          Dashboard 👋
         </h2>
 
-        <p class="text-gray-500 mt-2">
-          Aquí tienes el resumen general del sistema.
+        <p class="text-gray-500 mt-3 text-lg">
+          Bienvenido de nuevo al sistema administrativo.
         </p>
 
       </div>
 
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-5">
 
-        <input
-          type="text"
-          placeholder="Buscar..."
-          class="px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-        />
+        <!-- SEARCH -->
+        <div class="relative">
 
+          <input
+            type="text"
+            placeholder="Buscar..."
+            class="pl-12 pr-4 py-3 rounded-2xl border border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+
+          <span class="absolute left-4 top-3 text-gray-400">
+            🔍
+          </span>
+
+        </div>
+
+        <!-- NOTIFICATION -->
+        <button class="w-12 h-12 bg-white rounded-2xl shadow-md text-xl hover:scale-105 transition">
+          🔔
+        </button>
+
+        <!-- PROFILE -->
         <img
           src="https://i.pravatar.cc/100"
-          alt="avatar"
-          class="w-12 h-12 rounded-full border-2 border-indigo-500"
+          class="w-14 h-14 rounded-full border-2 border-indigo-500 shadow-lg"
         />
 
       </div>
 
     </div>
 
-    <!-- CARDS -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+    <!-- STATS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
 
       @for (stat of stats; track stat.title) {
 
         <div
-          class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition"
+          class="bg-white rounded-3xl p-6 shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-1"
         >
 
-          <div class="flex items-center justify-between">
+          <div class="flex justify-between items-center">
 
             <div>
 
-              <p class="text-gray-500">
+              <p class="text-gray-500 text-sm">
                 {{ stat.title }}
               </p>
 
-              <h3 class="text-3xl font-bold text-gray-800 mt-2">
+              <h3 class="text-4xl font-bold text-gray-800 mt-3">
                 {{ stat.value }}
               </h3>
 
+              <p class="text-green-500 mt-2 text-sm">
+                +12% este mes
+              </p>
+
             </div>
 
-            <span class="text-4xl">
+            <div class="w-16 h-16 rounded-2xl bg-indigo-100 flex items-center justify-center text-3xl">
               {{ stat.icon }}
-            </span>
+            </div>
 
           </div>
 
@@ -122,34 +212,51 @@
 
     </div>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- MAIN GRID -->
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
 
-      <!-- GRAFICA -->
-      <div class="lg:col-span-2 bg-white rounded-2xl shadow-md p-6">
+      <!-- CHART -->
+      <div class="xl:col-span-2 bg-white rounded-3xl p-8 shadow-md">
 
-        <div class="flex justify-between items-center mb-6">
+        <div class="flex justify-between items-center mb-8">
 
-          <h3 class="text-2xl font-bold text-gray-800">
-            Estadísticas
-          </h3>
+          <div>
+
+            <h3 class="text-3xl font-bold text-gray-800">
+              Estadísticas
+            </h3>
+
+            <p class="text-gray-500 mt-1">
+              Rendimiento semanal
+            </p>
+
+          </div>
 
           <button
-            class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl transition"
+            class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-3 rounded-2xl transition"
           >
-            Descargar
+            Descargar reporte
           </button>
 
         </div>
 
-        <div class="h-72 flex items-end gap-4">
+        <!-- BARS -->
+        <div class="h-80 flex items-end gap-4">
 
           @for (bar of bars; track $index) {
 
-            <div
-              class="flex-1 bg-indigo-500 rounded-t-xl hover:bg-indigo-400 transition"
-              [style.height.%]="bar"
-            >
+            <div class="flex flex-col items-center flex-1 gap-2">
+
+              <div
+                class="w-full bg-gradient-to-t from-indigo-600 to-indigo-400 rounded-t-2xl hover:scale-105 transition-all duration-300"
+                [style.height.%]="bar"
+              >
+              </div>
+
+              <span class="text-sm text-gray-500">
+                {{ months[$index] }}
+              </span>
+
             </div>
 
           }
@@ -158,26 +265,168 @@
 
       </div>
 
-      <!-- ACTIVIDAD -->
-      <div class="bg-white rounded-2xl shadow-md p-6">
+      <!-- RIGHT SECTION -->
+      <div class="space-y-6">
 
-        <h3 class="text-2xl font-bold text-gray-800 mb-6">
-          Actividad reciente
-        </h3>
+        <!-- ACTIVITY -->
+        <div class="bg-white rounded-3xl p-6 shadow-md">
 
-        <div class="space-y-4">
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">
+            Actividad reciente
+          </h3>
 
-          @for (activity of activities; track $index) {
+          <div class="space-y-4">
 
-            <div
-              class="p-4 bg-gray-100 rounded-xl hover:bg-gray-200 transition"
-            >
-              {{ activity }}
-            </div>
+            @for (activity of activities; track $index) {
 
-          }
+              <div
+                class="flex items-center gap-4 bg-gray-100 p-4 rounded-2xl hover:bg-gray-200 transition"
+              >
+
+                <div class="w-12 h-12 bg-indigo-500 text-white rounded-2xl flex items-center justify-center">
+                  🔔
+                </div>
+
+                <div>
+
+                  <p class="font-semibold text-gray-800">
+                    {{ activity }}
+                  </p>
+
+                  <span class="text-sm text-gray-500">
+                    Hace 5 minutos
+                  </span>
+
+                </div>
+
+              </div>
+
+            }
+
+          </div>
 
         </div>
+
+        <!-- TASKS -->
+        <div class="bg-white rounded-3xl p-6 shadow-md">
+
+          <div class="flex justify-between items-center mb-5">
+
+            <h3 class="text-2xl font-bold text-gray-800">
+              Tareas
+            </h3>
+
+            <button class="bg-green-500 text-white px-4 py-2 rounded-xl">
+              + Nueva
+            </button>
+
+          </div>
+
+          <div class="space-y-4">
+
+            <div class="flex items-center gap-3">
+              <input type="checkbox" class="checkbox checkbox-primary" checked />
+              <span>Actualizar dashboard</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <input type="checkbox" class="checkbox checkbox-primary" />
+              <span>Revisar reportes</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <input type="checkbox" class="checkbox checkbox-primary" />
+              <span>Enviar correos</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- TABLE -->
+    <div class="bg-white rounded-3xl shadow-md p-8 mt-10">
+
+      <div class="flex justify-between items-center mb-8">
+
+        <div>
+
+          <h3 class="text-3xl font-bold text-gray-800">
+            Últimos usuarios
+          </h3>
+
+          <p class="text-gray-500">
+            Usuarios registrados recientemente
+          </p>
+
+        </div>
+
+        <button class="bg-indigo-600 text-white px-5 py-3 rounded-2xl">
+          Ver todos
+        </button>
+
+      </div>
+
+      <div class="overflow-x-auto">
+
+        <table class="w-full">
+
+          <thead>
+
+            <tr class="border-b text-left text-gray-500">
+
+              <th class="pb-4">Usuario</th>
+              <th class="pb-4">Correo</th>
+              <th class="pb-4">Estado</th>
+              <th class="pb-4">Rol</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            @for (user of users; track user.email) {
+
+              <tr class="border-b hover:bg-gray-50 transition">
+
+                <td class="py-5 flex items-center gap-3">
+
+                  <img
+                    src="https://i.pravatar.cc/50"
+                    class="w-10 h-10 rounded-full"
+                  />
+
+                  {{ user.name }}
+
+                </td>
+
+                <td>
+                  {{ user.email }}
+                </td>
+
+                <td>
+
+                  <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">
+                    Activo
+                  </span>
+
+                </td>
+
+                <td>
+                  {{ user.role }}
+                </td>
+
+              </tr>
+
+            }
+
+          </tbody>
+
+        </table>
 
       </div>
 
