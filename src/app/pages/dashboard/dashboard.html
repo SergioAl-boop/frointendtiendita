@@ -1,0 +1,188 @@
+<div class="min-h-screen bg-gray-100 flex">
+
+  <!-- SIDEBAR -->
+  <aside class="w-64 bg-gray-900 text-white flex flex-col p-6">
+
+    <h1 class="text-3xl font-bold mb-10">
+      Dashboard
+    </h1>
+
+    <nav class="flex flex-col gap-4">
+
+      <a
+        href="#"
+        class="bg-indigo-600 p-3 rounded-xl hover:bg-indigo-500 transition"
+      >
+        Inicio
+      </a>
+
+      <a
+        href="#"
+        class="p-3 rounded-xl hover:bg-gray-800 transition"
+      >
+        Usuarios
+      </a>
+
+      <a
+        href="#"
+        class="p-3 rounded-xl hover:bg-gray-800 transition"
+      >
+        Reportes
+      </a>
+
+      <a
+        href="#"
+        class="p-3 rounded-xl hover:bg-gray-800 transition"
+      >
+        Configuración
+      </a>
+
+    </nav>
+
+    <div class="mt-auto">
+
+      <button
+        class="w-full bg-red-500 hover:bg-red-400 transition p-3 rounded-xl font-semibold"
+      >
+        Cerrar sesión
+      </button>
+
+    </div>
+
+  </aside>
+
+  <!-- CONTENIDO -->
+  <main class="flex-1 p-8">
+
+    <!-- HEADER -->
+    <div class="flex justify-between items-center mb-8">
+
+      <div>
+
+        <h2 class="text-4xl font-bold text-gray-800">
+          Bienvenido 👋
+        </h2>
+
+        <p class="text-gray-500 mt-2">
+          Aquí tienes el resumen general del sistema.
+        </p>
+
+      </div>
+
+      <div class="flex items-center gap-4">
+
+        <input
+          type="text"
+          placeholder="Buscar..."
+          class="px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+
+        <img
+          src="https://i.pravatar.cc/100"
+          alt="avatar"
+          class="w-12 h-12 rounded-full border-2 border-indigo-500"
+        />
+
+      </div>
+
+    </div>
+
+    <!-- CARDS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+
+      @for (stat of stats; track stat.title) {
+
+        <div
+          class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition"
+        >
+
+          <div class="flex items-center justify-between">
+
+            <div>
+
+              <p class="text-gray-500">
+                {{ stat.title }}
+              </p>
+
+              <h3 class="text-3xl font-bold text-gray-800 mt-2">
+                {{ stat.value }}
+              </h3>
+
+            </div>
+
+            <span class="text-4xl">
+              {{ stat.icon }}
+            </span>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+      <!-- GRAFICA -->
+      <div class="lg:col-span-2 bg-white rounded-2xl shadow-md p-6">
+
+        <div class="flex justify-between items-center mb-6">
+
+          <h3 class="text-2xl font-bold text-gray-800">
+            Estadísticas
+          </h3>
+
+          <button
+            class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl transition"
+          >
+            Descargar
+          </button>
+
+        </div>
+
+        <div class="h-72 flex items-end gap-4">
+
+          @for (bar of bars; track $index) {
+
+            <div
+              class="flex-1 bg-indigo-500 rounded-t-xl hover:bg-indigo-400 transition"
+              [style.height.%]="bar"
+            >
+            </div>
+
+          }
+
+        </div>
+
+      </div>
+
+      <!-- ACTIVIDAD -->
+      <div class="bg-white rounded-2xl shadow-md p-6">
+
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+          Actividad reciente
+        </h3>
+
+        <div class="space-y-4">
+
+          @for (activity of activities; track $index) {
+
+            <div
+              class="p-4 bg-gray-100 rounded-xl hover:bg-gray-200 transition"
+            >
+              {{ activity }}
+            </div>
+
+          }
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
