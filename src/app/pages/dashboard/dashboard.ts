@@ -14,26 +14,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 export class DashboardComponent {
 
   stats = [
-    {
-      title: 'Usuarios',
-      value: '1,245',
-      icon: '👥'
-    },
-    {
-      title: 'Ventas',
-      value: '$18,430',
-      icon: '💰'
-    },
-    {
-      title: 'Pedidos',
-      value: '320',
-      icon: '📦'
-    },
-    {
-      title: 'Mensajes',
-      value: '87',
-      icon: '💬'
-    }
+    { title: 'Usuarios', value: '1,245', icon: '👥' },
+    { title: 'Ventas', value: '$18,430', icon: '💰' },
+    { title: 'Pedidos', value: '320', icon: '📦' },
+    { title: 'Mensajes', value: '87', icon: '💬' }
   ];
 
   bars = [40, 65, 30, 80, 55, 90, 70];
@@ -48,21 +32,20 @@ export class DashboardComponent {
   ];
 
   users = [
-    {
-      name: 'Juan Pérez',
-      email: 'juan@gmail.com',
-      role: 'Admin'
-    },
-    {
-      name: 'Ana López',
-      email: 'ana@gmail.com',
-      role: 'Editor'
-    },
-    {
-      name: 'Carlos Ruiz',
-      email: 'carlos@gmail.com',
-      role: 'Usuario'
-    }
+    { name: 'Juan Pérez', email: 'juan@gmail.com', role: 'Admin' },
+    { name: 'Ana López', email: 'ana@gmail.com', role: 'Editor' },
+    { name: 'Carlos Ruiz', email: 'carlos@gmail.com', role: 'Usuario' }
   ];
 
+  // 🔹 Propiedades que faltaban en tu template
+  currentTime: string = new Date().toLocaleTimeString();
+
+  days: string[] = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+
+  constructor() {
+    // Actualiza la hora cada segundo
+    setInterval(() => {
+      this.currentTime = new Date().toLocaleTimeString();
+    }, 1000);
+  }
 }
