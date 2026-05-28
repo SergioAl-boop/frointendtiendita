@@ -57,3 +57,50 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+
+
+
+# Tiendita
+
+Breve descripción del proyecto.  
+ Aplicación web desarrollada con Angular para la gestión y visualización de productos de una tienda.
+
+---
+
+##  Características
+
+- Gestión de productos
+- Carrito de compras
+- Diseño responsive
+- Uso de Angular 21
+- Consumo de APIs
+- Componentes reutilizables
+
+---
+
+##  Tecnologías utilizadas
+
+- Angular
+- TypeScript
+- Tailwind CSS
+- HTML5
+- CSS3
+
+---
+
+## Estructura del proyecto
+
+```bash
+src/
+│
+├── app/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── interfaces/
+│   └── modals/
+│
+├── assets/
+└── environments/
